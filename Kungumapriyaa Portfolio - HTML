@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kungumapriyaa M | AI/ML Developer Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons for aesthetic appeal -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom scrollbar for aesthetics */
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #4f46e5; /* Indigo-600 */
+            border-radius: 4px;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #0f172a; /* Slate-900 */
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #6366f1, #a855f7); /* Indigo to Purple */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.5), 0 4px 6px -2px rgba(99, 102, 241, 0.05);
+        }
+        /* Style for the fixed header */
+        #header {
+            transition: background-color 0.3s ease;
+        }
+        /* Project card background effect */
+        .project-card {
+            position: relative;
+            background-color: #1e293b; /* Slate-800 */
+            overflow: hidden;
+        }
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .project-card:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- Fixed Header/Navbar -->
+    <header id="header" class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-sm shadow-xl">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-gradient">KUNGUMAPRIYAA M</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
+                <a href="#skills" class="hover:text-indigo-400 transition">Tech Stack</a>
+                <a href="#education" class="hover:text-indigo-400 transition">Education</a>
+                <a href="#achievements" class="hover:text-indigo-400 transition">Achievements</a>
+                <a href="#contact" class="px-3 py-1 bg-indigo-600 rounded-full hover:bg-indigo-700 transition">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-indigo-400 hover:text-indigo-300 transition">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-slate-800 shadow-lg border-t border-slate-700">
+            <a href="#projects" class="block px-4 py-3 text-sm hover:bg-slate-700 transition">Projects</a>
+            <a href="#skills" class="block px-4 py-3 text-sm hover:bg-slate-700 transition">Tech Stack</a>
+            <a href="#education" class="block px-4 py-3 text-sm hover:bg-slate-700 transition">Education</a>
+            <a href="#achievements" class="block px-4 py-3 text-sm hover:bg-slate-700 transition">Achievements</a>
+            <a href="#contact" class="block px-4 py-3 text-sm text-indigo-400 hover:bg-slate-700 transition">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- 1. Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center pt-20 pb-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="w-48 h-48 mx-auto mb-6 rounded-full bg-slate-700 flex items-center justify-center border-4 border-indigo-500 overflow-hidden">
+                    <!-- Placeholder image, replace with your actual photo URL -->
+                    <img src="pfp.jpg" onerror="this.onerror=null;this.src='https://placehold.co/128x128/334155/e2e8f0?text=KM'" alt="Profile Photo" class="w-full h-full object-cover">
+                </div>
+                <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight mb-4">
+                    I build the <span class="text-gradient">Future</span> with <span class="text-gradient">AI</span>
+                </h1>
+                <p class="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
+                    AI/ML Developer specializing in Multimodal Systems, Data Science, and robust problem-solving. Currently interning at Infosys SpringBoard.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#projects" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg shadow-indigo-500/50 transition duration-300 transform hover:scale-105">View Projects</a>
+                    <a href="mailto:kungumapriyaamkp5@gmail.com" class="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-3 px-8 rounded-full border border-slate-600 transition duration-300 transform hover:scale-105">Get in Touch</a>
+                </div>
+                <div class="mt-8 flex justify-center space-x-6">
+                    <a href="https://github.com/Kungumapriyaa M" target="_blank" class="text-slate-400 hover:text-indigo-400 transition"><i data-lucide="github" class="w-6 h-6"></i></a>
+                    <a href="https://linkedin.com/in/Kungumapriyaa M" target="_blank" class="text-slate-400 hover:text-indigo-400 transition"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                    <a href="mailto:kungumapriyaamkp5@gmail.com" class="text-slate-400 hover:text-indigo-400 transition"><i data-lucide="mail" class="w-6 h-6"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Projects Section -->
+        <section id="projects" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gradient">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+
+                <!-- Project 1: AI Based Multimodal Suspect Profiling & Detection System -->
+                <div class="project-card p-6 rounded-xl shadow-xl border border-slate-700 card-hover transition duration-300">
+                    <div class="relative z-10">
+                        <i data-lucide="scan-face" class="w-10 h-10 text-indigo-400 mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-2">AI Based Multimodal Suspect Profiling & Detection System</h3>
+                        <p class="text-sm font-medium text-indigo-400 mb-4">MAY 2025</p>
+                        <p class="text-slate-400 mb-4">Integrates facial recognition, voice analysis, GPS tracking, and behavior analysis to profile and identify suspects in real-time. Enhances law enforcement with smarter, faster, and more reliable detection.</p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="bg-indigo-600/20 text-indigo-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Facial Rec.</span>
+                            <span class="bg-indigo-600/20 text-indigo-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Voice Analysis</span>
+                            <span class="bg-indigo-600/20 text-indigo-300 text-xs font-medium px-2.5 py-0.5 rounded-full">GPS Tracking</span>
+                            <span class="bg-indigo-600/20 text-indigo-300 text-xs font-medium px-2.5 py-0.5 rounded-full">DeepFace</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Niramaya (Healthcare App) -->
+                <div class="project-card p-6 rounded-xl shadow-xl border border-slate-700 card-hover transition duration-300">
+                    <div class="relative z-10">
+                        <i data-lucide="baby" class="w-10 h-10 text-purple-400 mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-2">Niramaya - Digital Healthcare Companion</h3>
+                        <p class="text-sm font-medium text-purple-400 mb-4">FEB 2025</p>
+                        <p class="text-slate-400 mb-4">A healthcare app for new mothers to track baby vaccinations and connect with essential hospital services like appointments, prescriptions, medicine orders, and ambulance services.</p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Healthcare Tech</span>
+                            <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Mobile App Concept</span>
+                            <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-2.5 py-0.5 rounded-full">UI/UX</span>
+                            <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Digital Tracking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Portable cargo weigher -->
+                <div class="project-card p-6 rounded-xl shadow-xl border border-slate-700 card-hover transition duration-300">
+                    <div class="relative z-10">
+                        <i data-lucide="scale" class="w-10 h-10 text-cyan-400 mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-2">Portable Cargo Weigher System</h3>
+                        <p class="text-sm font-medium text-cyan-400 mb-4">NOV 2024</p>
+                        <p class="text-slate-400 mb-4">Developed a portable system for accurate load measurements in shipping and logistics, designed for time and cost efficiency with routine calibration support for precision.</p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="bg-cyan-600/20 text-cyan-300 text-xs font-medium px-2.5 py-0.5 rounded-full">IoT/Hardware</span>
+                            <span class="bg-cyan-600/20 text-cyan-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Logistics</span>
+                            <span class="bg-cyan-600/20 text-cyan-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Calibration</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. Skills/Tech Stack Section -->
+        <section id="skills" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gradient">Core Tech Stack</h2>
+
+            <!-- Technology Skills -->
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="p-6 bg-slate-800 rounded-xl shadow-lg border border-slate-700">
+                    <h3 class="flex items-center text-2xl font-semibold text-indigo-400 mb-4"><i data-lucide="cpu" class="w-6 h-6 mr-2"></i>AI/ML & Data Science</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">Python</span>
+                        <span class="tag">DeepFace</span>
+                        <span class="tag">Numpy</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Generative AI</span>
+                    </div>
+                </div>
+                <div class="p-6 bg-slate-800 rounded-xl shadow-lg border border-slate-700">
+                    <h3 class="flex items-center text-2xl font-semibold text-purple-400 mb-4"><i data-lucide="code" class="w-6 h-6 mr-2"></i>Programming & Databases</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">C</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Data Structures</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">DBMS</span>
+                    </div>
+                </div>
+                <div class="p-6 bg-slate-800 rounded-xl shadow-lg border border-slate-700">
+                    <h3 class="flex items-center text-2xl font-semibold text-cyan-400 mb-4"><i data-lucide="tool" class="w-6 h-6 mr-2"></i>Tools & Soft Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">VS Code</span>
+                        <span class="tag">Jupyter Notebook</span>
+                        <span class="tag">GitHub</span>
+                        <span class="tag">Teamwork</span>
+                        <span class="tag">Leadership</span>
+                        <span class="tag">Problem Solving</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coding Profiles Summary -->
+            <div class="mt-16 text-center">
+                <h3 class="text-3xl font-bold mb-6">Competitive Programming Snapshot</h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-4 bg-slate-800 rounded-lg border-l-4 border-indigo-500 shadow-md">
+                        <p class="text-3xl font-extrabold text-indigo-400">1519</p>
+                        <p class="text-sm text-slate-400">LeetCode Max Rating</p>
+                    </div>
+                    <div class="p-4 bg-slate-800 rounded-lg border-l-4 border-purple-500 shadow-md">
+                        <p class="text-3xl font-extrabold text-purple-400">1500+</p>
+                        <p class="text-sm text-slate-400">Skillrack Problems Solved</p>
+                    </div>
+                    <div class="p-4 bg-slate-800 rounded-lg border-l-4 border-cyan-500 shadow-md">
+                        <p class="text-3xl font-extrabold text-cyan-400">342</p>
+                        <p class="text-sm text-slate-400">GFG Coding Score</p>
+                    </div>
+                    <div class="p-4 bg-slate-800 rounded-lg border-l-4 border-pink-500 shadow-md">
+                        <p class="text-3xl font-extrabold text-pink-400">2 Star</p>
+                        <p class="text-sm text-slate-400">HackerRank Python/SQL</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Education & Certifications -->
+        <section id="education" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gradient">Education & Credentials</h2>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Education Timeline -->
+                <div class="p-6 bg-slate-800 rounded-xl shadow-xl border border-slate-700">
+                    <h3 class="text-3xl font-semibold text-indigo-400 mb-6 flex items-center"><i data-lucide="graduation-cap" class="w-7 h-7 mr-3"></i>Academic History</h3>
+                    <ol class="relative border-l border-slate-600">
+                        <li class="mb-8 ml-4">
+                            <div class="absolute w-3 h-3 bg-indigo-500 rounded-full mt-1.5 -left-1.5 border border-slate-800"></div>
+                            <time class="mb-1 text-sm font-normal leading-none text-slate-400">2024–2028</time>
+                            <h4 class="text-xl font-semibold text-white">B.Tech (AI-DS)</h4>
+                            <p class="text-base font-normal text-slate-300">Sri Eshwar College of Engineering</p>
+                            <p class="text-sm text-slate-400">CGPA: 8.32 (upto 2nd sem)</p>
+                        </li>
+                        <li class="mb-8 ml-4">
+                            <div class="absolute w-3 h-3 bg-indigo-500 rounded-full mt-1.5 -left-1.5 border border-slate-800"></div>
+                            <time class="mb-1 text-sm font-normal leading-none text-slate-400">2021–2023</time>
+                            <h4 class="text-xl font-semibold text-white">HSC</h4>
+                            <p class="text-base font-normal text-slate-300">St. Joseph's Matriculation Higher Sec School</p>
+                            <p class="text-sm text-slate-400">84.83%</p>
+                        </li>
+                    </ol>
+                    <!-- Internship Highlight -->
+                    <div class="mt-8 p-4 bg-indigo-600/20 rounded-lg border border-indigo-500/50">
+                        <h4 class="text-xl font-bold text-indigo-300">Infosys SpringBoard (AI Intern)</h4>
+                        <p class="text-sm text-indigo-200">AUG 2025 | Gaining practical experience in AI & ML concepts through hands-on projects.</p>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="p-6 bg-slate-800 rounded-xl shadow-xl border border-slate-700">
+                    <h3 class="text-3xl font-semibold text-purple-400 mb-6 flex items-center"><i data-lucide="award" class="w-7 h-7 mr-3"></i>Key Certifications</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-purple-400 mt-1 flex-shrink-0"></i>
+                            <div class="ml-3">
+                                <p class="font-semibold text-white">Artificial Intelligence Course</p>
+                                <p class="text-sm text-slate-400">Infosys SpringBoard (JULY 2025)</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-purple-400 mt-1 flex-shrink-0"></i>
+                            <div class="ml-3">
+                                <p class="font-semibold text-white">AI Primer Certification</p>
+                                <p class="text-sm text-slate-400">Infosys SpringBoard (JUNE 2025)</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-purple-400 mt-1 flex-shrink-0"></i>
+                            <div class="ml-3">
+                                <p class="font-semibold text-white">Generative AI</p>
+                                <p class="text-sm text-slate-400">GUVI & SAWIT AI (MAR/OCT 2024)</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-purple-400 mt-1 flex-shrink-0"></i>
+                            <div class="ml-3">
+                                <p class="font-semibold text-white">Computer Vision 101</p>
+                                <p class="text-sm text-slate-400">Infosys SpringBoard (MAY 2025)</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-purple-400 mt-1 flex-shrink-0"></i>
+                            <div class="ml-3">
+                                <p class="font-semibold text-white">Robotics and AI</p>
+                                <p class="text-sm text-slate-400">Great Learning (NOV 2024)</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Achievements Section -->
+        <section id="achievements" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gradient">Awards & Recognition</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+
+                <!-- Achievement Card 1 -->
+                <div class="p-5 bg-slate-800 rounded-xl shadow-lg border-t-4 border-yellow-500 card-hover transition duration-300">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="trophy" class="w-6 h-6 text-yellow-500 mr-3"></i>
+                        <h4 class="text-lg font-semibold text-white">Hackfest Finalist</h4>
+                    </div>
+                    <p class="text-slate-400">SAP Hackfest 2025 Finalist (Top 70 among 5000+ Teams). Demonstrates high-level competition success.</p>
+                    <span class="block text-right text-sm text-slate-500 mt-2">AUG 2025</span>
+                </div>
+
+                <!-- Achievement Card 2 -->
+                <div class="p-5 bg-slate-800 rounded-xl shadow-lg border-t-4 border-green-500 card-hover transition duration-300">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="star" class="w-6 h-6 text-green-500 mr-3"></i>
+                        <h4 class="text-lg font-semibold text-white">1st Place Project Expo</h4>
+                    </div>
+                    <p class="text-slate-400">Achieved 1st Place in the Project Expo Freshathon 3.0, showcasing strong execution skills.</p>
+                    <span class="block text-right text-sm text-slate-500 mt-2">MAY 2025</span>
+                </div>
+
+                <!-- Achievement Card 3 -->
+                <div class="p-5 bg-slate-800 rounded-xl shadow-lg border-t-4 border-red-500 card-hover transition duration-300">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="file-text" class="w-6 h-6 text-red-500 mr-3"></i>
+                        <h4 class="text-lg font-semibold text-white">1st Place Paper Presentation</h4>
+                    </div>
+                    <p class="text-slate-400">Secured 1st Place in Paper Presentation at KPR College, highlighting excellent research and communication.</p>
+                    <span class="block text-right text-sm text-slate-500 mt-2">APR 2025</span>
+                </div>
+
+                <!-- Achievement Card 4 -->
+                <div class="p-5 bg-slate-800 rounded-xl shadow-lg border-t-4 border-blue-500 card-hover transition duration-300">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="layers" class="w-6 h-6 text-blue-500 mr-3"></i>
+                        <h4 class="text-lg font-semibold text-white">Hackathon Finalist (Multiple)</h4>
+                    </div>
+                    <p class="text-slate-400">Finalist in AIWOS, TNWISE, and Project Expo VISAI, demonstrating consistent top-tier performance.</p>
+                    <span class="block text-right text-sm text-slate-500 mt-2">FEB-MAY 2025</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Contact Section -->
+        <section id="contact" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-6 text-gradient">Let's Connect</h2>
+            <p class="text-center text-xl text-slate-400 mb-12">I am always open to discussing new projects, collaborations, and AI/ML opportunities.</p>
+            <div class="max-w-2xl mx-auto p-8 bg-slate-800 rounded-xl shadow-2xl border border-slate-700">
+                <form id="contact-form" action="mailto:kungumapriyaamkp5@gmail.com" method="post" enctype="text/plain">
+                    <div class="mb-6">
+                        <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition duration-300 transform hover:scale-[1.01]">Send Message</button>
+                    <p id="form-message" class="text-center mt-4 text-green-400 hidden">Message sent successfully!</p>
+                </form>
+                <div class="mt-8 text-center">
+                    <p class="text-slate-400">Alternatively, find me here:</p>
+                    <div class="flex justify-center space-x-6 mt-3">
+                        <a href="mailto:kungumapriyaamkp5@gmail.com" class="text-slate-300 hover:text-indigo-400 transition"><i data-lucide="mail" class="w-6 h-6"></i></a>
+                        <a href="https://github.com/Kungumapriyaa M" target="_blank" class="text-slate-300 hover:text-indigo-400 transition"><i data-lucide="github" class="w-6 h-6"></i></a>
+                        <a href="https://linkedin.com/in/Kungumapriyaa M" target="_blank" class="text-slate-300 hover:text-indigo-400 transition"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 py-8 border-t border-slate-700 bg-slate-900">
+        <div class="container mx-auto px-4 text-center text-sm text-slate-500">
+            <p>&copy; 2025 Kungumapriyaa M. Built with Passion and AI.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // General utility function for handling Tailwind-styled tags
+        function addTagStyles() {
+            const tags = document.querySelectorAll('.tag');
+            tags.forEach(tag => {
+                tag.classList.add('inline-block', 'bg-slate-700/50', 'text-slate-300', 'text-xs', 'font-medium', 'px-3', 'py-1', 'rounded-full', 'transition', 'hover:bg-indigo-500/30');
+            });
+        }
+
+        // Header scroll behavior
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-xl', 'bg-slate-900');
+            } else {
+                header.classList.remove('shadow-xl', 'bg-slate-900');
+                header.classList.add('bg-slate-900/90');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('data-lucide', 'menu');
+            } else {
+                icon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons();
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.querySelector('i').setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // Simple form submission handler (to prevent leaving the single-page app)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            // The default action is mailto, which we allow, but we add a visual confirmation
+            setTimeout(() => {
+                const messageEl = document.getElementById('form-message');
+                messageEl.classList.remove('hidden');
+                setTimeout(() => {
+                    messageEl.classList.add('hidden');
+                }, 4000);
+            }, 100);
+        });
+
+        // Initial call to style tags
+        document.addEventListener('DOMContentLoaded', addTagStyles);
+    </script>
+
+</body>
+</html>
