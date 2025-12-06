@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>MKP Cosmetics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+    body {
+        background-color: black;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .top {
+        background-image: url('first.png');
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+    }
+
+    /* NAVBAR */
+    nav {
+        margin: 12px 0;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: rgb(244, 244, 244);
+        padding:  25px;
+        font-size: 18px;
+
+    }
+
+    nav a:hover {
+        color: rgb(200, 40, 110);
+    }
+
+
+   .slideshow {
+    width: 1000%;
+    height: 500px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    object-fit : cover;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.slide.show {
+    display: block;
+}
+    footer {
+        background: #e8d8f1;
+        text-align: center;
+        padding: 12px;
+        margin-top: 30px;
+        font-size: 14px;
+    }
+
+    footer a {
+        text-decoration: none;
+        color: rgb(70, 30, 60);
+        margin: 0 10px;
+    }
+
+    footer a:hover {
+        color: #E80071;
+    }
+    .search-box {
+    text-align: center;
+    margin: 15px 0;
+}
+</style>
+
+<script>
+let i = 0;
+let slides = document.querySelectorAll(".slide");
+
+function changeSlide() {
+    slides.forEach(s => s.classList.remove("show"));
+    slides[i].classList.add("show");
+    i = (i + 1) % slides.length;
+}
+
+changeSlide(); // show first slide
+setInterval(changeSlide, 2000);
+</script>
+
+
+</head>
+
+<body>
+
+<<div class="top"></div>
+<hr>
+
+<center>
+  
+
+    <nav>
+        
+        <a href="index.html">Home</a> |
+        <a href="womens.html">Women's products</a> |
+        <a href="mens.html">Men's products</a> |
+        <a href="about.html">About Us</a> |
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <hr>
+    
+
+</center>
+
+<div class = "slideshow">
+    <img src = 'winter.jpg' class = "wint">
+    <img src = 'new.png' class = "new">
+    <img src = 'collections.jpg' class = "coll">
+    <
+</div>"
+
+
+<footer>
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="faq.html">FAQ</a> |
+    <a href="contact.html">Contact Us</a>
+</footer>
+
+</body>
+</html>
